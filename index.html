@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="LKS Engineer, LKS Code, Luis Saavedra, Kennedy Saavedra">
+    <meta name="description" content="Website for the Distributor Dipesca">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, HTML5, CSS3, JavaScript, jQuery">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="icon" type="image/jpg" href=" {% static 'img/favicon.icon' %}" />
+
+    <title>Distributor Dipesca</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="76.71">
+    <!-- Modal Buy Ticket -->
+    <div class="modal" id="modalBuyTicket" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-platzi text-light">
+                    <h5 class="modal-title">Buy ticket</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-warning" role="alert">
+                        You will receive a confirmation email if you are drawn
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-platzi">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Buy Modal Ticket -->
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 p-sm-2 fixed-top ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/platzi-logo.png" alt="Logo">
+                    <span>Distributor Dipesca</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products & Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shipping">Shipping & Logistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footesr">Contact Us</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="" id="nav-buy-ticket" data-bs-toggle="modal"
+                                data-bs-target="#modalBuyTicket">Quote</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main id="main">
+        <!-- Carousel -->
+        <section>
+            <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/banner1.png" class="d-block w-100" alt="Photo 1 of Hawaii">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/banner2.png" class="d-block w-100" alt="Photo 2 of Hawaii">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/banner3.png" class="d-block w-100" alt="Photo 3 of Hawaii">
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 offset-md-6 text-center text-md-end">
+                                <h1>Distributor Dipesca</h1>
+                                <p class="d-none d-md-block">
+                                    Maritime solutions for the Latin American fishing industry.
+                                    We export spare parts, equipment, and technology for industrial vessels, with a
+                                    strong focus on yellowfin tuna fishing. Quality, reliability, and personalized
+                                    service from day one
+                                </p>
+                                <button class="me-3 btn btn-outline-light" data-bs-toggle="modal"
+                                    data-bs-target="#">Products
+                                </button>
+                                <a href="#footesr" class="btn btn-platzi">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Carousel -->
+
+        <!-- about us -->
+        <section id="about-us">
+            <div class="container-fluid shadow mb-5 bg-white rounded">
+                <div class="row">
+                    <div class="col-12 col-lg-6 pt-5 pb-4 text-light text-end">
+                        <div class="container col-10 py-5">
+                            <h1>About Us</h1>
+                            <p class="pt-4">We are a company specialized in the export and distribution of high-quality
+                                products and
+                                equipment for the fishing industry across Venezuela and other Latin American countries.
+                                Our
+                                mission is to ensure that every vessel is fully equipped to face the demands of the sea,
+                                providing reliable products, expert advice, and efficient logistics.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ps-0 pe-0 text-center bg-white">
+                        <figure class="mb-0">
+                            <img src="./assets/img/p111.png" alt="Motor de Barco">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /about us -->
+
+        <!-- Products & Services -->
+        <section id="products" class="text-dark-blue py-5">
+            <div class="container">
+                <h2>Products & Services</h2>
+                <ul class="pt-4">
+                    <li>Mechanical spare parts for Caterpillar and other major brands</li>
+                    <li>Electronic equipment: GPS systems, fish finders, VHF/UHF radios</li>
+                    <li>Engines and power generators</li>
+                    <li>Life rafts and marine safety equipment</li>
+                    <li>Maintenance tools and supplies for vessels</li>
+                </ul>
+                <a href="#catalog" class="btn btn-platzi me-2">Full Catalog</a>
+                <a href="#contact" class="btn btn-outline-dark text-dark-blue">Request a Quote</a>
+            </div>
+        </section>
+
+        <!-- Shipping & Logistics -->
+        <section id="shipping" class="bg-dark-blue text-white py-5">
+            <div class="container py-5">
+                <h2 class="">Shipping & Logistics</h2>
+                <p class="pt-4">We provide secure and efficient shipping solutions to Venezuela and Latin America. Our
+                    team handles the
+                    logistics process, ensuring timely and safe product delivery:
+                </p>
+                <ul>
+                    <li>Customs advisory and assistance</li>
+                    <li>Real-time tracking and updates</li>
+                    <li>Flexible options tailored to your needs</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline-light">Learn More About Shipping</a>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" class="text-dark-blue py-5">
+            <div class="container py-5">
+                <h2>Contact Us</h2>
+                <p class="pt-4">Got questions or need a quote? Get in touch and one of our specialists will respond as
+                    soon as possible.
+                </p>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-platzi">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Multi Pages 
+        <section class="module p-t-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 m-auto">
+                        <div class="space" data-my="-120px" style="margin-top: -120px;"></div>
+                        <p><img src="assets/images/main/macbook.png" alt=""></p>
+                        <div class="space" data-my="80px" style="margin-top: 80px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="max-width: 1600px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-special text-center m-b-40">Multi Page Demos</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Parallax</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-2.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Slider - Slide</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-3.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Slider - Fade</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-4.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Youtube</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-5.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Vimeo</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-6.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Local Video</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-7.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Gradient Style 1</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="index-8.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Gradient Style 2</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-special text-center m-b-40">One Page Demos</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Parallax</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-2.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Slider - Slide</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-3.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Slider - Fade</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-4.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Youtube</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-5.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Vimeo</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-6.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Local Video</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-7.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Gradient Style 1</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="demo-item"><a href="op-index-8.html"><img src="assets/img/p1.png" alt=""></a>
+                                    <h6>Gradient Style 2</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+    </main>
+    <!-- /Main -->
+
+    <!-- Footer 2-->
+    <footer id="footesr" class="text-center text-lg-start text-muted pt-5"
+        style="background:linear-gradient(90deg, #001333, #001333 30%,#3C668E);" id="1">
+        <!-- Section: Links  -->
+        <section class="border-bottom">
+            <div class="container text-center text-md-start mt-1 mb-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-4 col-xl-4 mx-auto mb-4 text-center">
+                        <!-- Links -->
+                        <h6 class="text-light mb-4">
+                            Get connected with us on social networks
+                        </h6>
+                        <div class="h2 text-info">
+                            <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <!-- <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a> -->
+
+                            <!-- <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a> -->
+                            <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <!-- <a href="" class="me-4 text-reset" style="text-decoration:none;">
+                                <i class="fab fa-github"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="mt-4 mt-md-0 col-md-4 col-lg-3 col-xl-3 mx-auto">
+                        <!-- Links -->
+                        <h6 class="text-light fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p class="text-white">
+                            <i class="fa-solid fa-location-dot me-3 btn-blue"></i>
+                            2500 Nw 79th Ave Ste 126 Doral, FL 33122
+                        </p>
+                        <p class="text-white">
+                            <i class="fas fa-envelope me-3 btn-blue"></i>
+                            correo@mail.com
+                        </p>
+                        <p class="text-white">
+                            <i class="fas fa-phone me-3 btn-blue"></i> +1 (000) 000-0000
+                        </p>
+                        <div class="map-container mt-5">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.162901954561!2d-80.32879252375514!3d25.79819927732896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b976d7fb7f81%3A0x7f63f3fc3245faaf!2s2500%20NW%2079th%20Ave%20STE%20126%2C%20Miami%2C%20FL%2033122%2C%20EE.%20UU.!5e0!3m2!1ses!2spe!4v1745944107231!5m2!1ses!2spe"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <!-- <hr> -->
+        <div class="text-light text-center p-4">
+            <p>&copy;2025 Copyright: Distributor Dipesca. All rights reserved.</p>
+            Design and development:
+            <a class="text-reset" href="https://github.com/lksengineer" target="_black">
+                <span class="text-info fw-bold">
+                    LKS Engineer
+                </span>
+            </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 4: Fontawesome -->
+    <script src="https://kit.fontawesome.com/866b7b41ce.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
